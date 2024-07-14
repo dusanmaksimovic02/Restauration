@@ -1,0 +1,117 @@
+.meni-kartica {
+  gap: 10px;
+  width: 100%;
+  height: fit-content;
+  background: rgba(0, 0, 0, 0.7) 50% !important;
+  border-radius: 20px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  place-items: center;
+}
+
+.meni-kartica .slika img {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+}
+
+.meni-kartica .slika {
+  grid-area: 1/1/3/2;
+}
+
+.meni-kartica .naziv {
+  grid-area: 1/2/2/3;
+  justify-self: center;
+}
+
+.meni-kartica .naziv h1 {
+  color: rgba(172, 95, 65, 0.938);
+}
+
+.meni-kartica .sastojci-jela {
+  grid-area: 2/2/3/3;
+}
+
+.meni-kartica .cena {
+  grid-area: 1/3/2/4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+.meni-kartica .dodaj-u-narudzbinu {
+  grid-area: 2/3/3/4;
+  justify-self: center;
+  position: relative;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.meni-kartica .dodaj-u-narudzbinu .dodaj-icon {
+  width: 30px;
+  height: 30px;
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.popup {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.popup::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #212529 transparent transparent transparent;
+}
+
+.dodaj-u-narudzbinu:hover .popup {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, -10px);
+}
+
+@media screen and (max-width: 1050px) {
+  .meni-kartica .sastojci-jela {
+    font-size: 30px;
+  }
+
+  .meni-kartica .cena {
+    font-size: 25px;
+  }
+
+  .meni-kartica .dodaj-u-narudzbinu .dodaj-icon {
+    width: 50px;
+    height: 50px;
+    place-self: center;
+  }
+
+  .popup {
+    font-size: 28px;
+  }
+}
+
+.dodaj-u-narudzbinu:active .dodaj-icon {
+  transform: scale(0.9);
+}

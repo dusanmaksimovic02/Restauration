@@ -1,0 +1,175 @@
+.logo {
+  background-image: url("../../icons/logo.png");
+  height: 50px;
+  width: 150px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.navbar {
+  height: 80px;
+  margin: 20px;
+  border-radius: 16px;
+  padding: 0.5rem;
+}
+
+.login-button {
+  color: #fff;
+  font-size: 17px;
+  padding: 8px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s background-color;
+}
+
+.navbar-toggler {
+  border: none;
+  font-size: 1.25rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.nav-link {
+  color: #666777;
+  font-weight: 500;
+  position: relative;
+  text-align: center;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #ffffff;
+}
+
+.container-fluid .order-button .order-icon {
+  height: 30px;
+  width: 30px;
+}
+
+.container-fluid .order-button {
+  margin-right: 0.5rem;
+  border-radius: 50px;
+}
+
+@media (min-width: 1005px) {
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: white;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+  }
+
+  .nav-link:hover::before,
+  .nav-link.active::before {
+    width: 100%;
+    visibility: visible;
+  }
+
+  .login-icon {
+    height: 27px;
+    width: 27px;
+    margin-right: 10px;
+  }
+
+  .offcanvas {
+    height: fit-content;
+    border-radius: 20px;
+  }
+}
+
+@media screen and (max-width: 1005px) {
+  .visible {
+    display: none;
+  }
+
+  .login-icon {
+    margin-right: 0px;
+    height: 35px;
+    width: 35px;
+  }
+
+  .login-button {
+    width: 70px;
+  }
+
+  .order-icon {
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+  }
+
+  .order-button {
+    width: 70px;
+  }
+
+  .offcanvas {
+    width: 250px !important;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .logo {
+    width: 300px;
+    height: 100px;
+  }
+
+  .navbar {
+    height: 150px;
+  }
+
+  .login-button {
+    height: 100px;
+    width: 100px;
+    display: flex;
+  }
+
+  .order-button {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .login-icon {
+    height: 80px;
+    width: 80px;
+  }
+
+  .order-icon {
+    min-height: 90%;
+    min-width: 90%;
+    flex-shrink: 0;
+  }
+
+  .navbar-toggler-icon {
+    width: 80px;
+    height: 80px;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .offcanvas {
+    height: fit-content;
+    width: 350px !important;
+    border-radius: 20px;
+    font-size: 30px;
+  }
+
+  .offcanvas-header h5 {
+    font-size: 40px;
+  }
+}

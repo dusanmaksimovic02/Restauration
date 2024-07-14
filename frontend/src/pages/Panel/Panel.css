@@ -1,0 +1,418 @@
+.profile-page {
+  height: 100vh;
+  padding-top: 120px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+    url(../../icons/Restauration.jpg) no-repeat center;
+  background-size: cover;
+  display: flex;
+}
+
+.profile-page .sidebar {
+  height: 100%;
+  width: fit-content;
+  color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.profile-page .sidebar .profil > img {
+  height: 120px;
+  width: 120px;
+  border-radius: 75px;
+}
+
+.profile-page .sidebar hr {
+  color: white;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-page .sidebar .logout,
+.profile-page .sidebar .user-information,
+.profile-page .sidebar .edit-user,
+.profile-page .sidebar .notification,
+.profile-page .sidebar .orders {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.profile-page .sidebar .logout:hover,
+.profile-page .sidebar .user-information:hover,
+.profile-page .sidebar .edit-user:hover,
+.profile-page .sidebar .notification:hover,
+.profile-page .sidebar .orders:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.profile-page .sidebar .logout:hover p,
+.profile-page .sidebar .user-information:hover p,
+.profile-page .sidebar .edit-user:hover p,
+.profile-page .sidebar .notification:hover p,
+.profile-page .sidebar .orders:hover p {
+  font-size: 17px;
+}
+
+.profile-page .sidebar .logout:hover .icon,
+.profile-page .sidebar .user-information:hover .icon,
+.profile-page .sidebar .edit-user:hover .icon,
+.profile-page .sidebar .notification:hover .icon,
+.profile-page .sidebar .orders:hover .icon {
+  width: 25px;
+  height: 25px;
+}
+
+.profile-page .sidebar p {
+  font-size: 15px;
+  padding-top: 1rem;
+}
+
+.profile-page .sidebar .icon {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+.profile-page .sidebar .logout {
+  justify-self: end !important;
+  margin-top: auto;
+}
+
+.profile-page .sidebar .profil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgba(172, 95, 65, 0.938);
+}
+
+.profile-page .forma {
+  margin: 50px;
+  flex: 1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  overflow-y: auto;
+}
+
+.profile-page .user-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 4rem;
+  border-radius: 20px;
+  width: fit-content;
+  height: fit-content;
+  justify-self: center;
+  align-self: center;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.profile-page .edit-user-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 4rem;
+  border-radius: 20px;
+  width: fit-content;
+  height: fit-content;
+  justify-self: center;
+  align-self: center;
+  overflow-y: auto;
+}
+
+.profile-page .sidebar .close-btn {
+  display: none;
+}
+
+.profile-page .forma .orders {
+  display: grid;
+  padding: 2.5rem;
+  row-gap: 1rem;
+  border-radius: 20px;
+  overflow-y: auto;
+}
+
+.profile-page .forma .notification {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  row-gap: 1rem;
+  border-radius: 20px;
+  overflow-y: auto;
+}
+
+.profile-page .forma .orders::-webkit-scrollbar,
+.profile-page .forma .edit-user-form::-webkit-scrollbar,
+.profile-page .forma .user-form::-webkit-scrollbar,
+.profile-page .forma .notification::-webkit-scrollbar {
+  width: 7px;
+}
+
+.profile-page .forma .orders::-webkit-scrollbar-track,
+.profile-page .forma .edit-user-form::-webkit-scrollbar-track,
+.profile-page .forma .user-form::-webkit-scrollbar-track,
+.profile-page .forma .notification::-webkit-scrollbar-track {
+  background: none;
+}
+
+.profile-page .forma .orders::-webkit-scrollbar-thumb,
+.profile-page .forma .edit-user-form::-webkit-scrollbar-thumb,
+.profile-page .forma .user-form::-webkit-scrollbar-thumb,
+.profile-page .forma .notification::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+.profile-page .forma .orders::-webkit-scrollbar-thumb:hover,
+.profile-page .forma .edit-user-form::-webkit-scrollbar-thumb:hover,
+.profile-page .forma .user-form::-webkit-scrollbar-thumb:hover,
+.profile-page .forma .notification::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.profile-page .sidebar .menu-items {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.profile-page .user-form table,
+.profile-page .user-form th,
+.profile-page .user-form td {
+  border: 1px solid white;
+  border-collapse: collapse;
+  padding: 8px;
+  text-align: left;
+}
+
+.profile-page .user-form th,
+.profile-page .user-form td {
+  min-width: 100px;
+}
+
+.profile-page .user-form table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.profile-page .user-form table th {
+  background-color: rgba(172, 95, 65, 0.938);
+}
+
+.profile-page .user-form::-webkit-scrollbar {
+  height: 7px;
+}
+
+.profile-page .user-form::-webkit-scrollbar-track {
+  background: none;
+}
+
+.profile-page .user-form::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+.profile-page .user-form::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+.profile-page .user-buttons {
+  display: flex;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 300px;
+  width: fit-content;
+}
+
+.profile-page .dodbtn {
+  align-self: flex-start;
+}
+
+.profile-page .izmenibtn {
+  align-self: center;
+}
+
+.profile-page .delbtn {
+  align-self: flex-end;
+}
+
+.profile-page .employee-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 300px;
+}
+
+.profile-page .hrana-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 300px;
+  width: 100px;
+}
+
+.profile-page .pice-buttons {
+  display: flex;
+  width: 100px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 300px;
+}
+
+.profile-page .table-buttons {
+  display: flex;
+  width: 100px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 300px;
+}
+
+.profile-page .recenzije-buttons {
+  display: flex;
+  width: 100px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 300px;
+}
+
+.profile-page .user-table {
+  width: 100%;
+}
+
+@media screen and (max-height: 660px) {
+  .profile-page .sidebar .profil {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 0.5rem;
+    height: 100px;
+  }
+
+  .profile-page .sidebar .profil > img {
+    grid-area: 1/1/3/2;
+    height: 90px;
+    width: 90px;
+  }
+
+  .profile-page .sidebar .profil .user-fullname {
+    grid-area: 1/2/2/3;
+  }
+
+  .profile-page .sidebar .profil .username {
+    grid-area: 2/2/3/3;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .profile-page {
+    display: flex;
+    flex-direction: column;
+    padding-top: 200px;
+  }
+
+  .profile-page .sidebar {
+    height: fit-content;
+    margin-right: 20px;
+    width: 97.5%;
+  }
+
+  .profile-page .sidebar .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .profile-page .sidebar .profil {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 0.5rem;
+    height: fit-content;
+    padding-bottom: 1rem;
+  }
+
+  .profile-page .sidebar .profil > img {
+    grid-area: 1/1/3/2;
+    height: 150px;
+    width: 150px;
+    place-self: center;
+  }
+
+  .profile-page .sidebar .profil .user-fullname {
+    grid-area: 1/2/2/3;
+    font-size: 45px;
+  }
+
+  .profile-page .sidebar .profil .username {
+    grid-area: 2/2/3/3;
+    font-size: 35px;
+  }
+
+  .profile-page .sidebar .menu-items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .profile-page .sidebar .menu-items hr {
+    display: none;
+  }
+
+  .profile-page .sidebar .menu-items p {
+    font-size: 22px;
+  }
+
+  .profile-page .user-form,
+  .profile-page .edit-user-form {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .profile-page .edit-user-form button {
+    font-size: 25px;
+  }
+
+  .profile-page .forma {
+    margin: 20px;
+  }
+
+  .profile-page .sidebar .logout:hover p,
+  .profile-page .sidebar .user-information:hover p,
+  .profile-page .sidebar .edit-user:hover p,
+  .profile-page .sidebar .notification:hover p,
+  .profile-page .sidebar .orders:hover p {
+    font-size: 25px;
+  }
+
+  .profile-page .sidebar .logout:hover .icon,
+  .profile-page .sidebar .user-information:hover .icon,
+  .profile-page .sidebar .edit-user:hover .icon,
+  .profile-page .sidebar .notification:hover .icon,
+  .profile-page .sidebar .orders:hover .icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .profile-page .sidebar .menu-items {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

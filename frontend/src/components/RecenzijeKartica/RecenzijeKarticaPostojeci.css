@@ -1,0 +1,128 @@
+.recenzije-kartica-postojeci {
+  border: 1px solid #ccc;
+
+  padding: 16px;
+  margin: 16px;
+  border-radius: 8px;
+  width: 90%;
+  height: auto;
+  color: white;
+}
+
+.recenzije-kartica-postojeci .recenzije-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #ccc;
+}
+
+.recenzije-kartica-postojeci .recenzije-slika {
+  padding-bottom: 2px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.recenzije-kartica-postojeci .recenzije-user-info {
+  flex-grow: 1;
+}
+
+.recenzije-kartica-postojeci .recenzije-username {
+  font-weight: bold;
+}
+
+.recenzije-kartica-postojeci .recenzije-datum {
+  font-size: 0.9em;
+  color: #777;
+}
+
+.recenzije-kartica-postojeci .recenzije-ocena {
+  display: flex;
+  align-items: center;
+}
+
+.recenzije-kartica-postojeci .zvezdica {
+  font-size: 24px;
+  color: #ccc;
+}
+
+.recenzije-kartica-postojeci .zvezdica.puna {
+  color: #f5a623;
+}
+
+.recenzije-kartica-postojeci .recenzije-naslov {
+  background-color: transparent;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.recenzije-kartica-postojeci .recenzije-tekst {
+  font-size: 1em;
+  background-color: transparent;
+  color: white;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .recenzije-kartica-postojeci {
+    width: 100%;
+  }
+
+  .recenzije-kartica-postojeci .recenzije-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .recenzije-kartica-postojeci .recenzije-slika {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+
+  .recenzije-kartica-postojeci .recenzije-user-info,
+  .recenzije-kartica-postojeci .recenzije-ocena {
+    width: 100%;
+  }
+
+  .recenzije-kartica-postojeci .recenzije-username,
+  .recenzije-kartica-postojeci .recenzije-datum,
+  .recenzije-kartica-postojeci .recenzije-naslov,
+  .recenzije-kartica-postojeci .recenzije-tekst {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .recenzije-kartica-postojeci {
+    width: 100%;
+  }
+
+  .recenzije-kartica-postojeci .recenzije-datum {
+    font-size: 20px;
+  }
+
+  .recenzije-kartica-postojeci .recenzije-username {
+    font-size: 30px;
+  }
+
+  .recenzije-kartica-postojeci .recenzije-naslov {
+    font-size: 30px;
+  }
+
+  .recenzije-kartica-postojeci .recenzije-tekst {
+    font-size: 30px;
+  }
+
+  .recenzije-kartica-postojeci .zvezdica {
+    font-size: 50px;
+  }
+
+  .recenzije-kartica-postojec .recenzije-slika {
+    height: 65px;
+    width: 65px;
+  }
+}

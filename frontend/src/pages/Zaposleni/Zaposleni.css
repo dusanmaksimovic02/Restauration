@@ -1,0 +1,58 @@
+.zaposleni {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+    url(../../icons/Restauration.jpg) no-repeat center;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding-top: 120px ;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  color: white;
+  place-items: center;
+}
+
+.zaposleni-kartica {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.zaposleni-kartica:hover {
+  transform: scale(1.05);
+}
+
+.zaposlen-kartica .ime h1 {
+  color: rgba(172, 95, 65, 0.938);
+}
+
+.zaposleni::-webkit-scrollbar {
+  width: 8px;
+}
+
+.zaposleni::-webkit-scrollbar-track {
+  background: none;
+}
+
+.zaposleni::-webkit-scrollbar-thumb {
+  background: #212529 /*#2c313c*/;
+  border-radius: 10px;
+}
+
+.zaposleni::-webkit-scrollbar-thumb:hover {
+  background: #343a40;
+}
+
+@media screen and (max-width:1050px){
+    .zaposleni{
+        padding-top: 200px;
+    }
+}

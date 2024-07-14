@@ -1,0 +1,72 @@
+.order-card {
+  display: grid;
+  width: 50vw;
+  height: fit-content;
+  border-radius: 20px;
+  border: 2px solid white;
+  padding: 2rem;
+}
+
+.order-card .heder {
+  grid-area: 1/1/2/2;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  color: rgba(172, 95, 65, 0.938);
+}
+
+.order-card .heder .datum {
+  align-self: center;
+  color: white;
+}
+
+.order-card hr {
+  grid-area: 2/1/3/2;
+}
+
+.order-card .sadrzajNarudzbine {
+  grid-area: 3/1/4/2;
+}
+
+.order-card .cena {
+  grid-area: 5/1/6/2;
+  place-self: center;
+}
+
+.order-card table {
+  width: 100%;
+}
+
+.order-card table thead tr th {
+  border: 2px solid rgba(172, 95, 65, 0.938);
+  text-align: center;
+  color: rgba(172, 95, 65, 0.938);
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.order-card table tbody tr td {
+  border: 1px solid white;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+@media screen and (max-width: 1050px) {
+  .order-card {
+    width: 80vw;
+  }
+
+  .order-card p,
+  .order-card .heder .datum,
+  .order-card .cena {
+    font-size: 27px;
+  }
+
+  .order-card .cena h5 {
+    font-size: 30px;
+  }
+
+  .order-card .heder h2 {
+    font-size: 40px;
+  }
+}

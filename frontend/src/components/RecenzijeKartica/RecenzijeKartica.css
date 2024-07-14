@@ -1,0 +1,146 @@
+.recenzije-kartica {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin: 16px;
+  border-radius: 8px;
+  width: 90%;
+  height: fit-content;
+}
+
+.recenzije-kartica .recenzije-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #ccc;
+}
+
+.recenzije-kartica .recenzije-slika {
+  padding-bottom: 2px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.recenzije-kartica .recenzije-user-info {
+  flex-grow: 1;
+}
+
+.recenzije-kartica .recenzije-username {
+  font-weight: bold;
+}
+
+.recenzije-kartica .recenzije-datum {
+  font-size: 0.9em;
+  color: #777;
+}
+
+.recenzije-kartica .recenzije-ocena {
+  display: flex;
+  align-items: center;
+}
+
+.recenzije-kartica .zvezdica {
+  font-size: 24px;
+  color: #ccc;
+}
+.recenzije-kartica .zvezdica:hover,
+.zvezdica:active {
+  color: #f5a623;
+  cursor: pointer;
+}
+
+.recenzije-kartica .zvezdica.puna {
+  color: #f5a623;
+}
+
+.recenzije-kartica .recenzije-naslov {
+  background-color: transparent;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 8px;
+  width: 60%;
+  height: 30%;
+  border-radius: 8px;
+  cursor: text;
+  color: white;
+}
+
+.recenzije-kartica .naslovRecenzije {
+  background-color: transparent;
+  font-size: 1.2em;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  border-color: #ccc;
+  cursor: text;
+  color: white;
+}
+
+.recenzije-kartica .recenzije-tekst {
+  font-size: 1em;
+  background-color: transparent;
+  color: white;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  cursor: text;
+}
+
+.recenzije-kartica .recenzijatext {
+  font-size: 1em;
+  background-color: transparent;
+  color: white;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  border-color: #ccc;
+  cursor: text;
+  resize: none;
+}
+
+.recenzije-kartica .random {
+  display: flex;
+  flex-direction: column;
+}
+
+.recenzije-kartica .postavi-recenziju-btn {
+  align-self: flex-end;
+}
+
+@media screen and (max-width: 1050px) {
+  .recenzije-kartica {
+    width: 100%;
+  }
+
+  .recenzije-kartica .recenzije-datum {
+    font-size: 20px;
+  }
+
+  .recenzije-kartica .recenzije-username {
+    font-size: 30px;
+  }
+
+  .recenzije-kartica .recenzije-naslov {
+    font-size: 30px;
+  }
+
+  .recenzije-kartica .recenzije-tekst {
+    font-size: 30px;
+  }
+
+  .recenzije-kartica .zvezdica {
+    font-size: 50px;
+  }
+
+  .recenzije-kartica .postavi-recenziju-btn {
+    font-size: 30px;
+  }
+
+  .recenzije-kartica .recenzije-slika {
+    height: 65px;
+    width: 65px;
+  }
+}

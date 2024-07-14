@@ -1,0 +1,61 @@
+.notification-card {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: fit-content;
+  grid-template-rows: 0.3fr 0.1fr 1fr;
+  grid-template-columns: 1fr 0.5fr;
+  border-radius: 20px;
+  border: 2px solid white;
+  padding: 2rem;
+}
+
+.notification-card .heder {
+  grid-area: 1/1/2/3;
+  display: flex;
+  gap: 3rem;
+  color: rgba(172, 95, 65, 0.938);
+}
+
+.notification-card .heder .datum {
+  align-self: center;
+  color: white;
+}
+
+.notification-card hr {
+  grid-area: 2/1/3/3;
+}
+
+.notification-card .sadrzajNarudzbine {
+  grid-area: 3/1/4/2;
+}
+
+.notification-card .link {
+  cursor: pointer;
+  text-decoration: underline;
+  width: fit-content;
+}
+
+.notification-card .link:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (max-width: 1050px) {
+  .notification-card {
+    width: 80vw;
+  }
+
+  .notification-card p,
+  .notification-card .heder .datum,
+  .notification-card .cena {
+    font-size: 27px;
+  }
+
+  .notification-card .cena h5 {
+    font-size: 30px;
+  }
+
+  .notification-card .heder h2 {
+    font-size: 40px;
+  }
+}

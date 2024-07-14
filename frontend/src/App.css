@@ -1,0 +1,36 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "leaflet/dist/leaflet.css";
+@import "react-toastify/dist/ReactToastify.minimal.css";
+
+html {
+  height: 100%;
+}
+
+main {
+  min-height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: gray;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #212529;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #343a40;
+}
+
+.Toastify__toast {
+  background: #212529 !important;
+  color: white !important;
+}
+
+.Toastify__close-button > svg {
+  color: white;
+}

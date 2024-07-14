@@ -1,0 +1,96 @@
+.notification-card {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: fit-content;
+  grid-template-rows: 0.3fr 0.1fr 1fr;
+  grid-template-columns: 1fr 0.5fr;
+  border-radius: 20px;
+  border: 2px solid white;
+  padding: 2rem;
+  position: relative;
+}
+
+.notification-card .heder {
+  grid-area: 1/1/2/3;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  color: rgba(172, 95, 65, 0.938);
+}
+
+.notification-card .heder .datum {
+  align-self: center;
+  color: white;
+}
+
+.notification-card hr {
+  grid-area: 2/1/3/3;
+}
+
+.notification-card .sadrzajNarudzbine {
+  grid-area: 3/1/4/2;
+}
+
+.notification-card table thead tr th {
+  border: 2px solid rgba(172, 95, 65, 0.938);
+  text-align: center;
+  color: rgba(172, 95, 65, 0.938);
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.notification-card table tbody tr td {
+  border: 1px solid white;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.notification-card p {
+  font-size: 20px;
+}
+
+.notification-card .popup {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 2555, 0.8);
+  color: black;
+  padding: 8px;
+  border-radius: 5px;
+  height: fit-content;
+  width: fit-content;
+  font-size: 16px;
+  white-space: nowrap;
+  z-index: 10;
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.notification-card:hover .popup {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 1050px) {
+  .notification-card {
+    width: 80vw;
+  }
+
+  .notification-card p,
+  .notification-card .heder .datum,
+  .notification-card .cena {
+    font-size: 27px;
+  }
+
+  .notification-card .cena h5 {
+    font-size: 30px;
+  }
+
+  .notification-card .heder h2 {
+    font-size: 40px;
+  }
+}

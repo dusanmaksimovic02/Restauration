@@ -1,0 +1,116 @@
+.recenzije {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+    url(../../icons/Restauration.jpg) no-repeat center;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  padding-top: 90px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  overflow: hidden;
+  color: white;
+}
+
+.naslov {
+  color: white;
+  font-style: italic;
+  font-family: "Dancing Script", cursive;
+  font-size: 70px;
+  font-weight: 800;
+  align-self: left;
+  margin-top: 20px;
+}
+
+.naslovdva {
+  color: white;
+  font-style: italic;
+  font-family: "Dancing Script", cursive;
+  font-size: 60px;
+  font-weight: 800;
+  align-self: right;
+  margin-top: 20px;
+}
+
+.recenzije .sadrzajRecenzije {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.recenzije .naslovDiv {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.recenzije .dodavanarecenzija {
+  height: 100%;
+  width: 50%;
+  overflow-y: auto;
+  overflow-x: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 2%;
+}
+
+.recenzije .korisnickeRecenzije {
+  height: 100%;
+  width: 52%;
+  overflow-y: auto;
+  overflow-x: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%;
+}
+
+.recenzije .non-interactable {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.non-interactable:hover::after {
+  content: attr(title);
+  visibility: visible;
+  opacity: 1;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+}
+
+@media screen and (max-width: 1050px) {
+  .recenzije .sadrzajRecenzije {
+    width: 100%;
+    overflow: hidden;
+
+    flex-direction: column;
+    margin-top: 100px;
+  }
+
+  .recenzije .dodavanarecenzija {
+    height: 40%;
+  }
+  
+  .recenzije .dodavanarecenzija,
+  .recenzije .korisnickeRecenzije {
+    width: 90%;
+    overflow: hidden;
+  }
+}

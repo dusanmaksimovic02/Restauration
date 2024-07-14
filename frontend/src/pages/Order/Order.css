@@ -1,0 +1,139 @@
+.order {
+  height: 100vh;
+  width: 100%;
+  padding-top: 120px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+    url(../../icons/Restauration.jpg) no-repeat center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.order h1 {
+  font-style: italic;
+  font-family: "Dancing Script", cursive;
+  font-size: 70px;
+  font-weight: 900;
+  align-self: center;
+}
+
+.order .order-content {
+  width: 90%;
+  height: 90%;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 20px;
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 3rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.order .order-content .end {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+}
+
+.order .order-content .end .total-price {
+  align-self: flex-end;
+  margin-right: 4rem;
+}
+
+.order .order-content .end .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order .order-content .order-items .order-item-container {
+  display: flex;
+  width: 100%;
+}
+
+.order .order-content .order-items .order-item-container .close-container {
+  display: flex;
+  width: fit-content;
+  position: relative;
+  display: inline-block;
+  align-self: center;
+  cursor: pointer;
+}
+
+.order
+  .order-content
+  .order-items
+  .order-item-container
+  .close-container
+  .close-button {
+  height: 30px;
+  width: 30px;
+}
+
+.popup {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.popup::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #212529 transparent transparent transparent;
+}
+
+.order
+  .order-content
+  .order-items
+  .order-item-container
+  .close-container:hover
+  .popup {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, -10px);
+}
+
+.order .order-content .end .sto-cena {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1050px) {
+  .order {
+    padding-top: 180px;
+  }
+
+  .order p {
+    font-size: 25px;
+  }
+
+  .order h3 {
+    font-size: 32px;
+  }
+
+  .order h5 {
+    font-size: 27px;
+  }
+
+  .order .order-content .end .buttons .btn {
+    font-size: 25px;
+  }
+}
