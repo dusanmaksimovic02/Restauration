@@ -2,7 +2,7 @@ namespace backend.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-[Authorize(Policy = "RequireMenadzerRole")]
+[Authorize(Policy = "RequireManagerRole")]
 public class MenadzerController : ControllerBase
 {
     private DataContext context { get; set; }

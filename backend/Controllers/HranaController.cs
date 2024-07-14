@@ -7,12 +7,10 @@ public class HranaController : ControllerBase
 {
 
     private DataContext context { get; set; }
-    private readonly GoogleCloudStorageService _storageService;
 
-    public HranaController(DataContext context,GoogleCloudStorageService storageService)
+    public HranaController(DataContext context)
     {
         this.context = context;
-        _storageService=storageService;
     }
 
     [HttpGet("Hrana")]
@@ -100,29 +98,5 @@ public class HranaController : ControllerBase
         {
             return BadRequest(e.Message);
         }
-    }
-
-    [HttpPost("uploadimagehrana")]
-    [Authorize(Roles ="Admin,Manager")]
-    public async Task<IActionResult> UploadImageHrana(IFormFile file,[FromBody] int id)
-    {
-        if (file == null || file.Length == 0)
-        {
-            return BadRequest("No file uploaded.");
-        }
-
-        var fileName = Path.GetFileName(file.FileName);
-        using var stream = file.OpenReadStream();
-        
-        var url = await _storageService.UploadFileAsync(stream, fileName);
-
-        var hrana = await context.Hrana.FindAsync(id);
-        if (hrana != null)
-        {
-            hrana.SlikaUrl = url;
-            await context.SaveChangesAsync();
-        }
-
-        return Ok(new { Url = url });
     }
 }

@@ -170,7 +170,7 @@ export const useAuth = () => React.useContext(UserContext);
 
 const getUserData = async (role: string, id: any) => {
   const mapUrl: { [key: string]: string } = {
-    Admin: `http://localhost:5104/Musterija/GetMusterijaById/${id}`,
+    Admin: `http://localhost:5104/Admin/GetAdminById/${id}`,
     Konobar: `http://localhost:5104/Konobar/GetKonobarById/${id}`,
     Kuvar: `http://localhost:5104/Kuvar/GetKuvarById/${id}`,
     Sanker: `http://localhost:5104/Sanker/GetSankerById/${id}`,

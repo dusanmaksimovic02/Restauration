@@ -2,16 +2,13 @@ namespace backend.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-
 public class PiceController : ControllerBase
 {
-    private readonly GoogleCloudStorageService _storageService;
     private DataContext context { get; set; }
 
-    public PiceController(DataContext context,GoogleCloudStorageService storageService)
+    public PiceController(DataContext context)
     {
         this.context = context;
-        _storageService=storageService;
     }
 
     [HttpGet("Pice")]
@@ -101,29 +98,5 @@ public class PiceController : ControllerBase
         {
             return BadRequest(e.Message);
         }
-    }
-
-    [HttpPost("uploadimagehrana")]
-    [Authorize(Roles ="Admin,Manager")]
-    public async Task<IActionResult> UploadImageHrana(IFormFile file,[FromBody] int id)
-    {
-        if (file == null || file.Length == 0)
-        {
-            return BadRequest("No file uploaded.");
-        }
-
-        var fileName = Path.GetFileName(file.FileName);
-        using var stream = file.OpenReadStream();
-        
-        var url = await _storageService.UploadFileAsync(stream, fileName);
-
-        var p = await context.Hrana.FindAsync(id);
-        if (p != null)
-        {
-            p.SlikaUrl = url;
-            await context.SaveChangesAsync();
-        }
-
-        return Ok(new { Url = url });
     }
 }

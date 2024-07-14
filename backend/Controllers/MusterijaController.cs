@@ -4,7 +4,7 @@ namespace backend.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-[Authorize(Policy = "RequireMusterijaRole")]
+[Authorize(Roles = "Admin, Manager, Musterija")]
 public class MusterijaController : ControllerBase
 {
     private DataContext context { get; set; }
